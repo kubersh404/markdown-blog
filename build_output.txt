@@ -1,0 +1,73 @@
+
+> example-blog@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.2.0 (Turbopack)
+
+  Creating an optimized production build ...
+
+thread 'tokio-runtime-worker' (45264) panicked at C:\Users\Administrator\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\hyper-util-0.1.17\src\client\legacy\client.rs:564:33:
+http2 feature is not enabled
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+Turbopack build encountered 1 warnings:
+[next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./src/app/layout.tsx
+
+
+
+> Build error occurred
+Error: Turbopack build failed with 2 errors:
+[next]/internal/font/google/geist_a71539c9.js:1:1
+Module not found: Can't resolve '@vercel/turbopack-next/internal/font/google/cssmodule.module.css'
+> 1 | ...%22path%22:%22layout.tsx%22,%22import%22:%22Geist%22,%22arguments%22:[{%22variable%22:%2...
+    |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | ...
+  3 | ...
+  4 | ...
+
+http2 feature is not enabled
+
+Debug info:
+- Execution of <ModuleAssetContext as AssetContext>::resolve_asset failed
+- Execution of resolve failed
+- Execution of resolve_internal failed
+- Execution of NextFontGoogleCssModuleReplacer::import_map_result failed
+- Execution of FetchClientConfig::fetch failed
+- http2 feature is not enabled
+Error while looking up import map: http2 feature is not enabled
+
+Debug info:
+- Execution of NextFontGoogleCssModuleReplacer::import_map_result failed
+- Execution of FetchClientConfig::fetch failed
+- http2 feature is not enabled
+
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.js
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: error:
+Failed to fetch `Geist Mono` from Google Fonts.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./src/app/layout.tsx
+
+
+    at <unknown> ([next]/internal/font/google/geist_a71539c9.js:1:1)
+    at <unknown> (http2 feature is not enabled)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
